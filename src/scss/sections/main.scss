@@ -1,5 +1,7 @@
 .main {
   padding: 70px 0px 150px 0px;
+  @include adaptiveValue('padding-top', 70, 35);
+  @include adaptiveValue('padding-bottom', 150, 80);
   background: url('@img/main/bg-shape.png') 0 0 / 100% 100% no-repeat;
 
   &__body {
@@ -9,44 +11,54 @@
     align-items: center;
     text-align: center;
     gap: 30px;
+    @include adaptiveValue('gap', 30, 20);
   }
 
   &__title {
     max-width: 1200px;
     font-size: 36px;
+    @include adaptiveValue('font-size', 36, 20);
 
     span {
-      position: relative;
-
-      &::after {
-        content: '';
-        position: absolute;
-        width: 100%;
-        height: 5px;
-        bottom: -5px;
-        left: 0;
-        background-color: #c183ff;
-      }
+      border-bottom: 5px solid #c183ff;
     }
   }
 
   &__subtitle {
     color: #353535;
     font-size: 24px;
+    @include adaptiveValue('font-size', 24, 18);
   }
 
   &__arrow {
+    width: 16px;
+    height: 135px;
+    @include adaptiveValue('height', 135, 50);
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
   }
 
   &__video {
     position: relative;
     width: 80%;
     height: 700px;
+    @include adaptiveValue('height', 700, 200);
+
+    @media (max-width: $mobile) {
+      width: 100%;
+    }
   }
 
   &__text {
+    padding: 40px 0px 0px 0px;
+    @include adaptiveValue('padding-top', 40, 30);
     max-width: 600px;
     font-size: 24px;
+    @include adaptiveValue('font-size', 24, 18);
   }
 }
 
@@ -57,7 +69,7 @@
     img {
       width: 100%;
       height: 100%;
-      object-fit: cover;
+      object-fit: contain;
     }
 
     &.img--top {
@@ -65,6 +77,10 @@
       height: 140px;
       top: -50px;
       left: -50px;
+      @include adaptiveValue('width', 140, 70);
+      @include adaptiveValue('height', 140, 70);
+      @include adaptiveValue('top', -50, -30);
+      @include adaptiveValue('left', -50, -10);
     }
 
     &.img--bottom {
@@ -72,6 +88,10 @@
       height: 300px;
       bottom: -70px;
       right: -50px;
+      @include adaptiveValue('width', 140, 70);
+      @include adaptiveValue('height', 300, 120);
+      @include adaptiveValue('bottom', -70, -45);
+      @include adaptiveValue('right', -50, -20);
     }
   }
 

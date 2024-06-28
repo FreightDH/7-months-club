@@ -7,11 +7,12 @@
   @include adaptiveValue('padding-bottom', 7, 4);
   @include adaptiveValue('padding-left', 15, 7);
   @include adaptiveValue('padding-right', 15, 7);
+
   color: #fff;
   background-color: #5f2eea;
   transition: all 0.3s ease 0s;
 
-  @include adaptiveValue('font-size', 16, 14);
+  @include adaptiveValue('font-size', 16, 13);
 
   @media (hover: hover) {
     &:hover {
