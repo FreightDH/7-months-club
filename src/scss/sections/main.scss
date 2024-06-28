@@ -44,13 +44,9 @@
 
   &__video {
     position: relative;
-    width: 80%;
+    width: 95%;
     height: 700px;
     @include adaptiveValue('height', 700, 200);
-
-    @media (max-width: $mobile) {
-      width: 100%;
-    }
   }
 
   &__text {
