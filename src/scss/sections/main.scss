@@ -1,0 +1,84 @@
+.main {
+  padding: 70px 0px 150px 0px;
+  background: url('@img/main/bg-shape.png') 0 0 / 100% 100% no-repeat;
+
+  &__body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 30px;
+  }
+
+  &__title {
+    max-width: 1200px;
+    font-size: 36px;
+
+    span {
+      position: relative;
+
+      &::after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 5px;
+        bottom: -5px;
+        left: 0;
+        background-color: #c183ff;
+      }
+    }
+  }
+
+  &__subtitle {
+    color: #353535;
+    font-size: 24px;
+  }
+
+  &__arrow {
+  }
+
+  &__video {
+    position: relative;
+    width: 80%;
+    height: 700px;
+  }
+
+  &__text {
+    max-width: 600px;
+    font-size: 24px;
+  }
+}
+
+.video {
+  &__img {
+    position: absolute;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    &.img--top {
+      width: 140px;
+      height: 140px;
+      top: -50px;
+      left: -50px;
+    }
+
+    &.img--bottom {
+      width: 140px;
+      height: 300px;
+      bottom: -70px;
+      right: -50px;
+    }
+  }
+
+  &__player {
+    width: 100%;
+    height: 100%;
+    border-radius: 30px;
+    background-color: #efefef;
+  }
+}
