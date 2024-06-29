@@ -1,5 +1,5 @@
 .about {
-  padding: 70px 0px 70px 0px;
+  padding: 70px 0px;
   @include adaptiveValue('padding-top', 70, 40);
 
   &__body {
