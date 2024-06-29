@@ -1,6 +1,7 @@
 .solution {
   padding: 30px 0px 100px 0px;
   @include adaptiveValue('padding-top', 30, 0);
+  @include adaptiveValue('padding-bottom', 100, 50);
 
   &__body {
     max-width: 80%;
