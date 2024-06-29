@@ -52,8 +52,10 @@
 
   &__img {
     min-width: 80px;
+    max-width: 80px;
     height: 80px;
     @include adaptiveValue('min-width', 80, 40);
+    @include adaptiveValue('max-width', 80, 40);
     @include adaptiveValue('height', 80, 40);
 
     img {

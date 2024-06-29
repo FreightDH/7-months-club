@@ -1,5 +1,5 @@
 .quote {
-  padding: 100px 0px 200px 0px;
+  padding: 100px 0px;
   @include adaptiveValue('padding-top', 100, 20);
 
   &__body {
