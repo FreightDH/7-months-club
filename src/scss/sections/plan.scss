@@ -1,7 +1,13 @@
 .plan {
+  padding: 0px 0px 50px 0px;
+
   &__body {
     max-width: 80%;
     margin: 0 auto;
+
+    @media (max-width: $tablet) {
+      max-width: 100%;
+    }
   }
 
   &__header {
@@ -9,7 +15,9 @@
     align-items: center;
     justify-content: space-between;
 
-    position: relative;
+    @media (max-width: $mobile) {
+      flex-direction: column;
+    }
   }
 
   &__info {
@@ -17,14 +25,18 @@
     display: flex;
     flex-direction: column;
     gap: 10px;
+
+    position: relative;
   }
 
   &__title {
     font-size: 30px;
+    @include adaptiveValue('font-size', 30, 24);
   }
 
   &__subtitle {
     font-size: 20px;
+    @include adaptiveValue('font-size', 20, 16);
   }
 
   &__img {
@@ -33,6 +45,11 @@
     flex: 1 1 auto;
     width: 300px;
     height: 350px;
+
+    @media (max-width: $mobile) {
+      @include adaptiveValue('width', 300, 200, 767.98, 320);
+      @include adaptiveValue('height', 350, 250, 767.98, 320);
+    }
 
     img {
       width: 100%;
@@ -45,9 +62,14 @@
     position: absolute;
     width: 350px;
     height: 120px;
-    top: 40px;
-    left: -260px;
+    top: -75px;
+    left: -250px;
     transform: rotate(-35deg);
+
+    @include adaptiveValue('width', 350, 100);
+    @include adaptiveValue('height', 120, 30);
+    @include adaptiveValue('top', -75, -30);
+    @include adaptiveValue('left', -250, -50);
 
     img {
       width: 100%;
@@ -59,29 +81,36 @@
   &__list {
     display: flex;
     flex-direction: column;
-  }
-
-  &__stage {
-    max-width: 400px;
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-
-    &:nth-child(even) {
-      align-self: flex-end;
-    }
-
-    &:not(:first-child) {
-      margin: -100px 0px 0px 0px;
-    }
+    gap: 30px;
   }
 }
 
 .stage {
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+
+  position: relative;
+
+  &:nth-child(even) {
+    align-self: flex-end;
+  }
+
+  &:not(:first-child) {
+    margin: -100px 0px 0px 0px;
+
+    @media (max-width: $pc) {
+      @include adaptiveValue('margin-top', -100, 0, 1480, 850);
+    }
+  }
+
   &__content {
     max-width: 400px;
     min-height: 300px;
     padding: 60px 30px 30px 30px;
+    @include adaptiveValue('padding-left', 30, 15);
+    @include adaptiveValue('padding-right', 30, 15);
 
     display: flex;
     flex-direction: column;
@@ -113,15 +142,20 @@
 
   &__title {
     font-size: 24px;
+    @include adaptiveValue('font-size', 24, 20);
   }
 
   &__list {
     flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
   }
 
   &__text {
     padding: 0px 0px 0px 15px;
     font-size: 18px;
+    @include adaptiveValue('font-size', 18, 16);
     position: relative;
 
     &::before {
@@ -139,6 +173,7 @@
   &__info {
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
     gap: 10px;
 
     img {
@@ -152,9 +187,108 @@
     padding: 0px 0px 0px 7px;
     color: #686868;
     font-size: 18px;
+    @include adaptiveValue('font-size', 18, 16);
 
     span {
       font-weight: 700;
+    }
+  }
+
+  &__circle {
+    position: absolute;
+    width: 185px;
+    height: 110px;
+    top: -30px;
+    left: -75px;
+
+    @include adaptiveValue('width', 185, 145);
+    @include adaptiveValue('height', 110, 70);
+    @include adaptiveValue('top', -30, -20);
+    @include adaptiveValue('left', -75, -60);
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+
+  &__dots {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    top: -160px;
+    right: -70px;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+
+  &__human {
+    margin: -150px 0px 0px 0px;
+    @include adaptiveValue('margin-top', -150, -75);
+    width: 300px;
+    height: 300px;
+    @include adaptiveValue('width', 300, 225);
+    @include adaptiveValue('height', 300, 225);
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__question {
+    margin: 0px 0px 70px 0px;
+    @include adaptiveValue('margin-bottom', 70, 25);
+    font-size: 24px;
+    @include adaptiveValue('font-size', 24, 20);
+    text-align: center;
+
+    span {
+      font-weight: 700;
+    }
+  }
+
+  &__arrow {
+    position: absolute;
+    width: 250px;
+
+    @media (max-width: $pc) {
+      @include adaptiveValue('width', 250, 150, 1480, 1300);
+    }
+
+    @media (max-width: 1300px) {
+      display: none;
+    }
+
+    &.arrow--left {
+      bottom: -30px;
+      right: -300px;
+
+      @media (max-width: $pc) {
+        @include adaptiveValue('right', -300, -175, 1480, 1300);
+      }
+    }
+
+    &.arrow--right {
+      bottom: -80px;
+      left: -300px;
+      transform: rotate(100deg);
+
+      @media (max-width: $pc) {
+        @include adaptiveValue('left', -300, -175, 1480, 1300);
+      }
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
     }
   }
 }
