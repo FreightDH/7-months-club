@@ -30,17 +30,6 @@
     position: relative;
   }
 
-  &__title {
-    font-size: 30px;
-    @include adaptiveValue('font-size', 30, 20);
-  }
-
-  &__subtitle {
-    color: #686868;
-    font-size: 20px;
-    @include adaptiveValue('font-size', 20, 16);
-  }
-
   &__img {
     display: flex;
     justify-content: center;

@@ -2,3 +2,13 @@
 @import 'base/forms/forms';
 
 // Общие стили
+.section--title {
+  font-size: 30px;
+  @include adaptiveValue('font-size', 30, 20);
+}
+
+.section--subtitle {
+  color: #686868;
+  font-size: 20px;
+  @include adaptiveValue('font-size', 20, 16);
+}

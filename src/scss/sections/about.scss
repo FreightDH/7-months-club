@@ -65,17 +65,6 @@
     margin: 0px 0px 20px 0px;
   }
 
-  &__title {
-    font-size: 30px;
-    @include adaptiveValue('font-size', 30, 20);
-  }
-
-  &__subtitle {
-    color: #686868;
-    font-size: 20px;
-    @include adaptiveValue('font-size', 20, 16);
-  }
-
   &__text {
     text-align: justify;
     font-size: 20px;
