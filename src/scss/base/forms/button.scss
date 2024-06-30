@@ -1,6 +1,7 @@
 // <BUTTON>
 // Snippet code "a.btn"
 .btn {
+  min-width: 150px;
   display: inline-block;
   padding: 6px 15px 7px 15px;
   @include adaptiveValue('padding-top', 6, 3);
@@ -8,11 +9,13 @@
   @include adaptiveValue('padding-left', 15, 7);
   @include adaptiveValue('padding-right', 15, 7);
 
+  font-size: 18px;
+  text-align: center;
   color: #fff;
   background-color: #5f2eea;
   transition: all 0.3s ease 0s;
 
-  @include adaptiveValue('font-size', 16, 13);
+  @include adaptiveValue('font-size', 18, 13);
 
   @media (hover: hover) {
     &:hover {

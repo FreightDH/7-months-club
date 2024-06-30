@@ -25,16 +25,18 @@
     display: flex;
     flex-direction: column;
     gap: 10px;
+    @include adaptiveValue('gap', 10, 5);
 
     position: relative;
   }
 
   &__title {
     font-size: 30px;
-    @include adaptiveValue('font-size', 30, 24);
+    @include adaptiveValue('font-size', 30, 20);
   }
 
   &__subtitle {
+    color: #686868;
     font-size: 20px;
     @include adaptiveValue('font-size', 20, 16);
   }
@@ -68,8 +70,8 @@
 
     @include adaptiveValue('width', 350, 100);
     @include adaptiveValue('height', 120, 30);
-    @include adaptiveValue('top', -75, -30);
-    @include adaptiveValue('left', -250, -50);
+    @include adaptiveValue('top', -75, -20);
+    @include adaptiveValue('left', -250, -60);
 
     img {
       width: 100%;
