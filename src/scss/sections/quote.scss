@@ -33,15 +33,22 @@
     &.icon--top {
       top: -35px;
       left: -55px;
-      @include adaptiveValue('top', -35, -25);
-      @include adaptiveValue('left', -55, -15);
+
+      @media (max-width: 920px) {
+        left: -20px;
+        @include adaptiveValue('left', -20, -5, 920, 320);
+      }
     }
 
     &.icon--bottom {
-      bottom: -30px;
+      bottom: -35px;
       right: -55px;
-      @include adaptiveValue('right', -55, -15);
       transform: rotate(180deg);
+
+      @media (max-width: 920px) {
+        right: -20px;
+        @include adaptiveValue('right', -20, -5, 920, 320);
+      }
     }
 
     img {
