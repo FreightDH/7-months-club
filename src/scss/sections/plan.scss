@@ -133,7 +133,7 @@
 
   &__title {
     font-size: 24px;
-    @include adaptiveValue('font-size', 24, 20);
+    @include adaptiveValue('font-size', 24, 18);
   }
 
   &__list {
