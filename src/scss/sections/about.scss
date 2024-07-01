@@ -1,6 +1,7 @@
 .about {
   padding: 70px 0px;
   @include adaptiveValue('padding-top', 70, 40);
+  @include adaptiveValue('padding-bottom', 70, 20);
 
   &__body {
     display: flex;

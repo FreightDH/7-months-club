@@ -1,3 +1,20 @@
-//--------------------------------------------------------------
+.footer {
+  padding: 20px 0;
+  background-color: #e8e8ff;
 
-//--------------------------------------------------------------
+  &__body {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    font-size: 18px;
+    @include adaptiveValue('font-size', 18, 16);
+
+    @media (max-width: 610px) {
+      flex-direction: column;
+      justify-content: center;
+      gap: 5px;
+      text-align: center;
+    }
+  }
+}

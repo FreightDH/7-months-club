@@ -1,5 +1,6 @@
 .description {
-  padding: 0px 0px 100px 0px;
+  padding: 50px 0px 100px 0px;
+  @include adaptiveValue('padding-top', 50, 0);
 
   &__body {
     max-width: 80%;
@@ -110,6 +111,7 @@
 
   &__img {
     min-width: 180px;
+    max-width: 180px;
     height: 110px;
 
     img {
@@ -242,8 +244,10 @@
 .payment {
   &__img {
     min-width: 40px;
+    max-width: 40px;
     height: 40px;
     @include adaptiveValue('min-width', 40, 30);
+    @include adaptiveValue('max-width', 40, 30);
     @include adaptiveValue('height', 40, 30);
 
     img {

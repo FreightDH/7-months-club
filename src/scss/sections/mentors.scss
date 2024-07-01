@@ -1,5 +1,5 @@
 .mentors {
-  padding: 100px 0;
+  padding: 100px 0 50px 0;
   @include adaptiveValue('padding-top', 100, 0);
 
   &__body {
@@ -45,9 +45,12 @@
   &__list {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    justify-content: space-between;
     gap: 30px;
     @include adaptiveValue('gap', 30, 20);
+
+    > * {
+      justify-self: space-between;
+    }
 
     @media (max-width: 1110px) {
       grid-template-columns: repeat(2, auto);
@@ -55,7 +58,9 @@
 
     @media (max-width: 610px) {
       grid-template-columns: repeat(1, auto);
-      justify-content: center;
+      > * {
+        justify-self: center;
+      }
     }
   }
 }
