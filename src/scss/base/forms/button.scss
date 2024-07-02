@@ -15,7 +15,7 @@
   background-color: #5f2eea;
   transition: all 0.3s ease 0s;
 
-  @include adaptiveValue('font-size', 18, 13);
+  @include adaptiveValue('font-size', 18, 12);
 
   @media (hover: hover) {
     &:hover {

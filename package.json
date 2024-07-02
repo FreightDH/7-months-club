@@ -49,6 +49,7 @@
     "prettier": "latest",
     "sass": "latest",
     "sass-loader": "latest",
+    "@splidejs/splide": "^4.1.4",
     "string-replace-loader": "latest",
     "style-loader": "latest",
     "terser-webpack-plugin": "latest",
