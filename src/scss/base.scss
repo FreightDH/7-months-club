@@ -1,0 +1,32 @@
+// Формы
+@import 'base/forms/forms';
+
+// Общие стили
+.section--title {
+  font-size: 30px;
+  @include adaptiveValue('font-size', 30, 20);
+}
+
+.section--subtitle {
+  color: #686868;
+  font-size: 20px;
+  @include adaptiveValue('font-size', 20, 16);
+}
+
+// Слайдер
+.splide__arrow--prev {
+  left: -3em;
+}
+.splide__arrow--next {
+  right: -3em;
+}
+
+.splide__pagination {
+  bottom: -1.5em;
+}
+.splide__pagination__page {
+  background: #c3c3ff;
+}
+.splide__pagination__page.is-active {
+  background: #5f2eea;
+}

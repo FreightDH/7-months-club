@@ -1,0 +1,32 @@
+// <BUTTON>
+// Snippet code "a.btn"
+.btn {
+  min-width: 150px;
+  display: inline-block;
+  padding: 6px 15px 7px 15px;
+  @include adaptiveValue('padding-top', 6, 3);
+  @include adaptiveValue('padding-bottom', 7, 4);
+  @include adaptiveValue('padding-left', 15, 7);
+  @include adaptiveValue('padding-right', 15, 7);
+
+  font-size: 18px;
+  text-align: center;
+  color: #fff;
+  background-color: #5f2eea;
+  transition: all 0.3s ease 0s;
+
+  @include adaptiveValue('font-size', 18, 12);
+
+  @media (hover: hover) {
+    &:hover {
+      background-color: #5025c7;
+    }
+  }
+
+  @media (hover: none) {
+    &:active {
+      background-color: #5025c7;
+    }
+  }
+}
+// </BUTTON>
